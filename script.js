@@ -1,30 +1,16 @@
-let groceryData = [];
-
-function listGrocery(){
-	document.getElementById("main").innerHTML=groceryData.toString();
+let arr=[3, 7, 9, 35, 97, 56, 70, 100, 95, 1000, 78945, 45, 1];
+function go(){
+	for(i=0;i<arr.length;i++){
+		document.getElementById("array").innerHTML+=(arr[i]+", ");
+	}
 }
-
-
-
-function addToEnd(){
-	groceryList.push(prompt("Enter grocery name"));
-	document.write(groceryData + "<br />");
-	listGrocery();
-}
-function removeFromEnd(){
-	//groceryList.pop();
-	alert("Removing "+groceryList.pop());
-	listGrocery();
-}
-function addToStart(){
-	groceryList.unshift(prompt("Enter grocery name"));
-	document.write(groceryData + "<br />");
-	listGrocery();
-}
-function removeFromStart(){
-	alert("Removing "+groceryList.shift());
-	//groceryList.shift();
-	listGrocery();
-}
+function big(){
+	var largest = arr[0];
+	for(var i=0;i<arr.length;i++){
+		if(largest<arr[i]){
+			largest=arr[i];
+		}
+	}
+	document.getElementById("large").innerHTML+=(largest);
 
 
